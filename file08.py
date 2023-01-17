@@ -6,12 +6,13 @@ def main(data:str):
     Returns:
         int: return answer
     """
-    maxi = 0
+    data = data.split('\n')
+    maxi = len(data[0])
     for i in data:
         if i.isdigit():
-            maxi = i
-            if maxi < i:
-                maxi = i
+            maxi = len(i)
+            if maxi < len(i):
+                maxi = len(i)
     return maxi
 
 # Read data from file
