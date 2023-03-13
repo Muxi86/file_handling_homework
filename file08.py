@@ -6,14 +6,12 @@ def main(data:str):
     Returns:
         int: return answer
     """
-    data = data.split('\n')
-    maxi = len(data[0])
+    lst = []
     for i in data:
+        i.split('\n')
         if i.isdigit():
-            maxi = len(i)
-            if maxi < len(i):
-                maxi = len(i)
-    return maxi
+            lst.append(i)
+    return max(lst)
 
 # Read data from file
 f = open('txt_file/data08.txt')
